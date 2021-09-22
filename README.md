@@ -286,3 +286,160 @@ This command will change the current working directory to the parent directory o
 ![cd outer nested](https://user-images.githubusercontent.com/48273777/134334665-8ca4bc72-11cd-4c86-ae60-1d25148b412f.png)
 
 <hr />
+
+# cal
+**cal** command will print the calendar in terminal window. By default, cal command will show the current month as output.
+<hr />
+
+## cal
+This command will by default show the calendar of current month.
+
+![Screenshot from 2021-09-22 18-43-25](https://user-images.githubusercontent.com/48273777/134353997-025c1e33-c0a3-4bd4-a750-5b26d91932dd.png)
+
+# cal _[year]_
+This command will show the entire year's calendar as output.
+
+![Screenshot from 2021-09-22 18-43-39](https://user-images.githubusercontent.com/48273777/134354116-d25d8c0b-6b21-474b-b218-843e817931c6.png)
+
+# cal _[month]_ _[year]_
+This command will print the calendar for the specified month of the year.
+
+![Screenshot from 2021-09-22 19-10-31](https://user-images.githubusercontent.com/48273777/134354580-a01a25e8-6307-4a1f-a455-70de1880f5d0.png)
+
+# cal -3
+This command will show the calendar of _previous_, _current_, & _next_ month.
+
+![Screenshot from 2021-09-22 19-09-26](https://user-images.githubusercontent.com/48273777/134354807-e40e217a-3de9-4d92-a47a-f03df745548b.png)
+
+<hr />
+
+# mv 
+This command is used to rename a file or a directory.
+<hr />
+
+## mv 
+This command can be used to rename a file. The syntax is _mv file_to_be_renamed new_file_name_
+
+![Screenshot from 2021-09-22 18-31-12](https://user-images.githubusercontent.com/48273777/134351537-fb8c7f2f-9936-4bd5-9b41-82cf5d466864.png)
+
+<hr />
+
+# cp
+This command is used to copy a file. The syntax is _cp file_to_be_copied new_file_name_
+
+![Screenshot from 2021-09-22 18-32-37](https://user-images.githubusercontent.com/48273777/134351770-46732b1b-3200-40d7-9d18-1787149d029e.png)
+<hr />
+
+# man 
+This command is used to display a manual for any other shell command. For example, man date will print the **man cp** will print the manual for **cp** command.
+
+![Screenshot from 2021-09-22 18-32-51](https://user-images.githubusercontent.com/48273777/134352065-bb3da512-8457-4e8c-9d4b-47d46c4f5ba0.png)
+
+<hr />
+
+# date
+Date command is used to display the system date and time. By default **date** command will print the date of the time zone which was configured on the system while installing the operating system.
+
+## date commands
+
+- **--date** - Displays the given date string date format.
+![Screenshot from 2021-09-22 18-37-36](https://user-images.githubusercontent.com/48273777/134353276-db862deb-2de8-4791-9336-abfe26c6cf8f.png)
+
+- **% D** - Display date as mm/dd/yy.
+- **%d** - Display the day of the month (01 to 31).
+- **%a** - Displays the abbreviated name for weekdays (Sun to Sat).
+- **%A** - Displays full weekdays (Sunday to Saturday).
+- **%h** - Displays abbreviated month name (Jan to Dec).
+- **%b** - Displays abbreviated month name (Jan to Dec).
+- **%B** - Displays full month name(January to December).
+- **%m** - Displays the month of year (01 to 12).
+- **%y** - Displays last two digits of the year(00 to 99).
+- **%Y** - Display four-digit year. 
+- **%T** - Display the time in 24 hour format as - HH:MM:SS.
+- **%H** - Display the hour. 
+- **%M** - Display the minute. 
+- **%S** - Display the seconds.
+
+![Screenshot from 2021-09-22 18-39-51](https://user-images.githubusercontent.com/48273777/134353351-b000764d-0004-49c6-aa75-f61a00f689ae.png)
+
+![Screenshot from 2021-09-22 19-04-19](https://user-images.githubusercontent.com/48273777/134353580-23d729a9-0e80-46ac-b30d-5af5cb576187.png)
+
+<hr />
+
+# chmod
+**chmod** command stands for **change mode** command. There are 3 modes -
+- +w (write)
+- +r (read)
+- +x (execute)
+
+### chmod [u/g/o]+[r/w/x]
+This command will change the modes for **either user, group, others or all**  as **either read, write, execute or all**
+
+| Category   | Operation               | Permission  |
+|------------|-------------------------|-------------|
+| u (User)   | + (assign)              | r (read)    |
+| g (Groups) | - (remove)              | w (write)   |
+| o (Others) | = (Absolute permission) | x (execute) |
+| a (all)    |                         |             |
+
+![chmod +x](https://user-images.githubusercontent.com/48273777/134368241-68bc05a8-e580-47cc-999e-3e63faa03e5b.png)
+![chmod g+x](https://user-images.githubusercontent.com/48273777/134368049-d56a09a0-dd85-4494-9c4f-1790358b675a.png)
+![chmod o+x](https://user-images.githubusercontent.com/48273777/134368075-c58f4b14-48db-4e76-a21c-78bf2a17d15e.png)
+![chmod +r](https://user-images.githubusercontent.com/48273777/134368105-537773b3-0d25-48c8-bc42-3035a6d11f75.png)
+![chmod u+x](https://user-images.githubusercontent.com/48273777/134368126-d8a9520a-5542-42a5-9114-3f05cfcb7f5e.png)
+![chmod +w](https://user-images.githubusercontent.com/48273777/134368163-3fd1afe9-9bf6-4f78-9c59-0340dbf48ef0.png)
+
+### Using chmod with Absolute permission
+![chmod number](https://user-images.githubusercontent.com/48273777/134368062-6aa5d061-fbdf-40dd-87c5-008e52bb84a0.png)
+
+<hr />
+
+# grep
+The grep command searched file(s) for lines that match a specified pattern.
+<hr />
+
+### grep -v _[pattern]_ _[filename]_
+Print all lines that do not match pattern.
+
+![grep-v](https://user-images.githubusercontent.com/48273777/134368922-5be06be6-dd23-4e5f-bf3e-ac8624f86271.png)
+
+### grep -n _[pattern]_ _[filename]_
+Print the matched line and its line number.
+
+![grep-n](https://user-images.githubusercontent.com/48273777/134369038-3b1f1246-ecf6-41de-b908-77551f6db1ba.png)
+
+### grep -l _[pattern]_ _[filename]_
+Print only the names of files with matching lines.
+
+![grep-l](https://user-images.githubusercontent.com/48273777/134369106-1e6ab387-4289-4fd4-98c1-dd46cc18f879.png)
+
+### grep -c _[pattern]_ _[filename]_
+Print only the count of matching lines.
+
+![grep-c](https://user-images.githubusercontent.com/48273777/134369170-54e8dc2f-e5a7-427a-8838-f29d5309684a.png)
+
+
+### grep -i _[pattern]_ _[filename]_
+Match either upper- or lowercase.
+
+![grep-i](https://user-images.githubusercontent.com/48273777/134369297-61cd5e53-eafe-4c4e-b3db-7bdeacf460f2.png)
+
+### grep -w _[pattern]_ _[filename]_
+Match whole word
+
+![grep-w](https://user-images.githubusercontent.com/48273777/134369377-18c58933-5851-4744-82a0-1bee4c5bd991.png)
+
+### grep -o _[pattern]_ _[filename]_
+Print only the matched parts of a matching line, with each such part on a separate output line.
+
+![grep-0](https://user-images.githubusercontent.com/48273777/134369463-cfd43a0e-d208-4483-81d8-e765c7b409cf.png)
+
+
+<hr />
+
+# bc
+**bc** stands for _basic calculator_ . It is a simple calculator using which we can perform basic arithmatic operations.
+
+![Screenshot from 2021-09-22 18-40-45](https://user-images.githubusercontent.com/48273777/134355183-90db9d03-1e93-4813-a50e-feed5f491431.png)
+<hr />
+
