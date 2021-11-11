@@ -17,13 +17,7 @@ while((temp>0))
 do
   digit=$((temp%10))
   
-  i=1
-  power=1
-  while((i<=count))
-  do
-    power=$((power*digit))
-    ((i++))
-  done  
+  power=$(echo "$digit ^ $count" | bc)
 
   sum=$((sum+power))
   temp=$((temp/10))

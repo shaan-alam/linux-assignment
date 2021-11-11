@@ -1,36 +1,54 @@
-echo "Enter first number: "
-read num1
-echo "Enter second number: "
-read num2
+while((1))
+do
+  echo "Enter first number: "
+  read num1
+  echo "Enter second number: "
+  read num2  
 
-echo "1. Add"
-echo "2. Substract"
-echo "3. Multiply"
-echo "4. Divide"
-echo "5. Exit"
+  echo "1. Add"
+  echo "2. Substract"
+  echo "3. Multiply"
+  echo "4. Divide"
+  echo "5. Modulus"
+  echo "6. Exit"
+  
+  echo "Enter your choice : "
+  read ch
 
-echo "Enter your choice : "
-read choice
+  if [ $ch -eq 1 ]
+  then 
+    sum=$(echo "$num1 + $num2" | bc)
+    echo "Sum = $sum"
+  elif [ $ch -eq 2 ]
+  then
+    diff=$(echo "$num1 - $num2" | bc)
+    echo "Difference = $diff"
+  elif [ $ch -eq 3 ]
+  then
+    product=$(echo "$num1 * $num2" | bc)
+    echo "Product = $product"
+  elif [ $ch -eq 4 ]
+  then
+    quotient=$(echo "scale=2; $num1 / $num2" | bc)
+    echo "Quotient = $quotient"
+  elif [ $ch -eq 5 ]
+  then 
+    mod=$(echo "$num1 % $num2" | bc)
+    echo "Modulus = $mod"
+  elif [ $ch -eq 6 ]
+  then 
+    echo "Exit..."
+    break
+  else
+    echo "Wrong choice..."
+    break
+  fi
 
-if [ $choice -eq 1 ]
-then 
-  sum=$((num1+num2))
-  echo "Sum = $sum"
-elif [ $choice -eq 2 ]
-then
-  diff=$((num1-num2))
-  echo "Difference = $diff"
-elif [ $choice -eq 3 ]
-then
-  product=$((num1*num2))
-  echo "Product = $product"
-elif [ $choice -eq 4 ]
-then
-  quotient=$((num1/num2))
-  echo "Quotient = $quotient"
-elif [ $choice -eq 5 ]
-then 
-  echo "Exit..."
-else
-  echo "Wrong choice..."
-fi
+  echo "Do you want to contiue?? (Y/N)"
+  read choice
+
+  if [ "$choice" == "N" ]
+  then
+    break
+  fi
+done

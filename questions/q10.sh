@@ -6,10 +6,17 @@ read power
 
 answer=1
 i=1
-while (($i <= $power))
-do  
-  answer=$((answer*number))
-  ((i++))
-done
+
+if [ $power -lt 0 ]
+then
+  power=$((0 - $power))
+  answer=$(echo "scale=2; 1 / ($number ^ $power)" | bc)
+else
+  while (($i <= $power))
+  do  
+    answer=$((answer*number))
+    ((i++))
+  done
+fi
 
 echo "Answer = $answer"
